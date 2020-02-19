@@ -13,6 +13,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
         $a=array();
+        //Sql query to get number of matches won by each player and store in array 
         $sql = "SELECT winner,count(aname) as c FROM race group by winner ";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
@@ -26,6 +27,7 @@
         } else {
             echo "0 results";
         }
+        //sort array in descending order to generate rank of each player
        asort($a);
        $a=array_reverse($a);
        $r=1;
@@ -44,7 +46,8 @@
 
         $conn->close();
          ?>
-   
+    <br>
+   <a href="index.html">Back to the homepage</a>
 
     </body>
     </html>

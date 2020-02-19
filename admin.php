@@ -13,13 +13,14 @@
 <body>
 
 <form action="welcome.php" method="post">
-Name of Player A: <input type="text" name="aname" ><br>
-Name of PLayer B: <input type="text" name="bname" ><br>
-Winner: <input type="text" name="winner"><br>
+Name of Player A: <input type="text" name="aname" required ><br>
+Name of Player B: <input type="text" name="bname" required ><br>
+Winner: <input type="text" name="winner" required><br>
 
 
 <input type="submit">
-
+<br>
+<a href="index.html">Back to the homepage</a>
 
 </form>
 
